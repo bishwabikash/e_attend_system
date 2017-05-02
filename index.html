@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/login.css">
+    <title>login</title>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+        function populate() {
+            $.ajax({
+                type: 'get',
+                url: 'ajax//fetch.php',
+
+                success: function (response) {
+
+                    document.getElementById("sem").innerHTML = response;
+                }
+            });
+        }
+        function populates(val) {
+            $.ajax({
+                type: 'post',
+                url: 'ajax//pap_fetch.php',
+                data: {
+                    get_option: val
+                },
+                success: function (response) {
+
+                    document.getElementById("paper").innerHTML = response;
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="login" id="login" class="std">
+    <form method="post" action="includes/gatekeeper.php">
+        <input type="text" name="unm" placeholder="username"/><br>
+        <input type="password" name="pwd" placeholder="password"/><br>
+        <select name="sem" id="sem" onfocus="populate()" onchange="populates(this.value)">
+            <option value="#">Select Semester</option>
+        </select>
+        <select name="paper" id="paper">
+            <option value="#">Select Paper</option>
+        </select>
+        <input type="submit" id="submit" name="login" value="login">
+    </form>
+    <form method="post" action="includes/gatekeeper.php">
+        <input type="text" name="full_name" placeholder="Full Name"><br>
+        <input type="text" name="uname" placeholder="username"><br>
+        <input type="password" name="pass" placeholder="password"><br>
+        <input type="password" name="passcon" placeholder="confirm password"><br>
+        <input type="email" name="email" placeholder="e-mail">
+        <input type="submit" value="signup" name="signup">
+    </form>
+</div>
+</body>
+</html>

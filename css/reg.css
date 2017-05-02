@@ -1,0 +1,68 @@
+fieldset {
+    border: none;
+    display: block;
+}
+
+.std {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    height: 195px;
+    width: 250px;
+    box-shadow: 0px 0px 10px #999;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 8px;
+    background-color: #d9f8f6;
+
+}
+
+body {
+    margin: 50px 200px 50px 200px;
+    padding: 5px;
+    background-color: rgba(70, 238, 241, 0.46);
+    color: black;
+}
+
+input[type=text], input[type=password], input[type=tel], input[type=email] {
+    border-radius: 8px;
+    border: none;
+    height: 35px;
+    width: 220px;
+    box-shadow: 0px 0px 0px #999;
+    margin-bottom: 5px;
+    #margin-left: 5px;
+}
+
+input[placeholder], option {
+    padding-left: 10px;
+    font-size: large;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    opacity: 50;
+}
+
+select {
+    border-radius: 8px;
+    height: 30px;
+    width: 230px;
+    box-shadow: 0px 0px 0px #999;
+    margin-bottom: 5px;
+
+    border: none;
+}
+
+option {
+    padding-left: 10px;
+}
+
+input[type=submit], input[type=reset] {
+    background: #f8b84b;
+    border: none;
+    color: white;
+    font-size: x-large;
+    box-shadow: darkgrey;
+    margin-left: 8px;
+    padding-left: 11px;
+    padding-right: 11px;
+    width: 100px;
+}

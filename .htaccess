@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^attend(.*)pp(.*).blade$ ./main.php?sm=$1&pp=$2
