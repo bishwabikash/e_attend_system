@@ -4,7 +4,7 @@ global $db;
 function inc_attend($class, $paper, $sid, $db)
 {
     $paper = $paper % 10;
-    $col_upd = mysqli_fetch_assoc(mysqli_query($db, "SELECT present_days FROM sem_student WHERE id=" . $sid))['present_days'];
+    $col_upd = mysqli_fetch_assoc(mysqli_query($db, "SELECT present_days FROM sem_student WHERE id=" . $sid . " AND semester=" . $class))['present_days'];
     $attend_arr = explode(',', $col_upd);
     $attend_arr[$paper - 1] = $attend_arr[$paper - 1] + 1;
     $col_upd = implode(",", $attend_arr);
